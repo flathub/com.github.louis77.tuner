@@ -55,8 +55,8 @@
             ],
             "sources": [{
                 "type": "archive",
-                "url": "https://github.com/louis77/tuner/archive/1.2.5.tar.gz",
-                "sha256": "6b1692f2d99a94cb9eae08c709f3c5485b6c346cdcff7ba249ab414d7c349670"
+                "url": "https://github.com/louis77/tuner/archive/1.3.0.tar.gz",
+                "sha256": "37b9e69fbf6aa9da287ced34e3931663f357a9e83b0c3e4f72d036d26646a04b"
             }]
         }
     ]
