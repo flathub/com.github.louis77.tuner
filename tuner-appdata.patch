@@ -1,0 +1,17 @@
+diff --git a/data/com.github.louis77.tuner.appdata.xml.in b/data/com.github.louis77.tuner.appdata.xml.in
+index 4336de0..8db7c75 100644
+--- a/data/com.github.louis77.tuner.appdata.xml.in
++++ b/data/com.github.louis77.tuner.appdata.xml.in
+@@ -25,10 +25,10 @@
+ 
+   <screenshots>
+     <screenshot type="default">
+-      <image>https://raw.githubusercontent.com/louis77/tuner/master/docs/screen_light_1.3.0.png</image>
++      <image>https://raw.githubusercontent.com/louis77/tuner/1.4.0/docs/screen_light_1.3.0.png</image>
+     </screenshot>
+     <screenshot>
+-      <image>https://raw.githubusercontent.com/louis77/tuner/master/docs/screen_dark_1.3.0.png</image>
++      <image>https://raw.githubusercontent.com/louis77/tuner/1.4.0/docs/screen_dark_1.3.0.png</image>
+     </screenshot>
+   </screenshots>
+ 
