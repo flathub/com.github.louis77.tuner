@@ -16,7 +16,6 @@
         "--metadata=X-DConf=migrate-path=/com/github/louis77/tuner/",
         "--socket=pulseaudio",
         "--talk-name=org.freedesktop.Notifications",
-        "--system-talk-name=org.freedesktop.DBus.Error",
         "--own-name=org.mpris.MediaPlayer2.Tuner"
     ],
     "cleanup": [
