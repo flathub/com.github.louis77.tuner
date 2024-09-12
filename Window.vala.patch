@@ -1,0 +1,14 @@
+--- a/src/Widgets/Window.vala	2024-09-12 07:27:43.705170643 -0500
++++ b/src/Widgets/Window.vala	2024-09-12 07:30:48.863177237 -0500
+@@ -76,11 +76,9 @@
+             player.volume = value;
+         });
+ 
+-        adjust_theme();
+         settings.changed.connect( (key) => {
+             if (key == "theme-mode") {
+                 warning("theme-mode changed");
+-                adjust_theme();
+ 
+             }
+         });
