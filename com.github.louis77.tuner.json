@@ -80,11 +80,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/louis77/tuner.git",
-                    "tag": "1.5.2"
-                },
-                {
-                    "type": "patch",
-                    "path": "Window.vala.patch"
+                    "tag": "v1.5.4"
                 }
             ]
         }
