@@ -80,7 +80,6 @@
                 {
                     "type": "git",
                     "url": "https://github.com/louis77/tuner.git",
-                    "branch": "development",
                     "commit": "eab6157387c4ea96c16563ad48ed3c6956505bda"
                 }
             ]
