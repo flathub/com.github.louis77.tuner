@@ -78,9 +78,9 @@
             ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://github.com/louis77/tuner.git",
-                    "commit": "eab6157387c4ea96c16563ad48ed3c6956505bda"
+                    "type": "archive",
+                    "url": "https://raw.githubusercontent.com/bztd/bztd.github.io/refs/heads/main/Flathub/tuner-development.zip",
+                    "sha256": "6b4fe29c0c8c57045459c23c83dbe3de82880c1a4e1fa4e90fd29067adef4b03"
                 }
             ]
         }
