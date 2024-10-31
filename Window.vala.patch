@@ -1,6 +1,6 @@
---- a/src/Widgets/Window.vala	2024-09-12 07:27:43.705170643 -0500
-+++ b/src/Widgets/Window.vala	2024-09-12 07:30:48.863177237 -0500
-@@ -76,11 +76,9 @@
+--- a/src/Widgets/Window.vala	2024-10-29 18:15:52.617122634 -0500
++++ b/src/Widgets/Window.vala	2024-10-29 18:17:19.826125740 -0500
+@@ -80,11 +80,9 @@
              player.volume = value;
          });
  
