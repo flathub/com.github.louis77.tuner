@@ -1,14 +1,14 @@
---- a/src/Widgets/Window.vala	2024-10-29 18:15:52.617122634 -0500
-+++ b/src/Widgets/Window.vala	2024-10-29 18:17:19.826125740 -0500
-@@ -80,11 +80,9 @@
+--- a/Window.vala
++++ b/Window.vala
+@@ -113,11 +113,9 @@
              player.volume = value;
          });
  
--        adjust_theme();
+-        adjust_theme();    // TODO Theme management needs research in flatpak as nonfunctional
          settings.changed.connect( (key) => {
              if (key == "theme-mode") {
                  warning("theme-mode changed");
--                adjust_theme();
- 
+-                adjust_theme();                     
              }
          });
+ 
