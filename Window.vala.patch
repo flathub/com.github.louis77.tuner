@@ -1,5 +1,5 @@
---- a/Window.vala
-+++ b/Window.vala
+--- a/src/Widgets/Window.vala
++++ b/src/Widgets/Window.vala
 @@ -113,11 +113,9 @@
              player.volume = value;
          });
