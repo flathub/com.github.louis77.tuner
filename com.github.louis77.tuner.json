@@ -80,7 +80,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/louis77/tuner.git",
-                    "commit": "b7f6636"
+                    "tag": "v1.5.5-beta.2"
                 },
                 {
                     "type": "patch",
