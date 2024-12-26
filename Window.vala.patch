@@ -1,7 +1,7 @@
 diff -ur a/src/Widgets/Window.vala b/src/Widgets/Window.vala
 --- a/src/Widgets/Window.vala	2024-11-11 10:27:33.000000000 -0800
 +++ b/src/Widgets/Window.vala	2024-11-11 12:23:27.465802837 -0800
-@@ -113,11 +113,9 @@
+@@ -114,11 +114,9 @@
              player.volume = value;
          });
  
