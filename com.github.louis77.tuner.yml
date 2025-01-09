@@ -84,9 +84,9 @@ modules:
   config-opts:
     - "--buildtype=release"
   post-install:
-  - cp -n -v /app/share/icons/hicolor/16x16/actions/*  /app/share/icons/hicolor/scalable/actions/
-  - install -Dm644 /app/share/icons/hicolor/64x64/apps/${FLATPAK_ID}.svg  -t /app/share/icons/hicolor/128x128/apps/
-  - rm -r /app/share/icons/hicolor/[0-9]*
+    - cp -n -v /app/share/icons/hicolor/16x16/actions/*  /app/share/icons/hicolor/scalable/actions/
+    - install -Dm644 /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.svg  -t /app/share/icons/hicolor/scalable/apps/
+    - rm -r /app/share/icons/hicolor/[0-9]*
   sources:
     - type: git
       url: https://github.com/louis77/tuner.git
