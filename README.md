@@ -5,6 +5,7 @@
 _org.freedesktop.Platform_ latest version is 24.08
 
 ## Use
+Before checking in, test build and lint:
 ```
 flatpak run org.flatpak.Builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --repo=repo builddir com.github.louis77.tuner.yml
 flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest com.github.louis77.tuner.yml
