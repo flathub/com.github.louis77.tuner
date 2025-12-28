@@ -4,7 +4,7 @@ app-id: com.github.louis77.tuner
 command: com.github.louis77.tuner
 
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 
 sdk: org.freedesktop.Sdk
 sdk-extensions:
@@ -26,7 +26,7 @@ finish-args:
   - "--talk-name=org.freedesktop.Notifications"
   - "--own-name=org.mpris.MediaPlayer2.Tuner"
   - "--env=PATH=/usr/bin:/app/bin:/app/vala/bin"
-  - "--env=add-ld-path=/app/vala/lib:/app/lib:/lib"
+#  - "--env=add-ld-path=/app/vala/lib:/app/lib:/lib"
 
 cleanup:
   - "/include"
@@ -58,8 +58,8 @@ modules:
   sources:
     - type: git
       url: https://gitlab.gnome.org/GNOME/libsoup.git
-      tag: 3.6.1
-      commit: 8b46a93bc1cbadb22dcdbb6844d9616723376535
+      tag: 3.6.5
+      commit: 766e17528251c9b696a6076300ac61adc95536ac
 
 - name: gee
   buildsystem: autotools
@@ -67,13 +67,15 @@ modules:
     cflags: -Wno-error=incompatible-pointer-types
   sources:
     - type: archive
-      url: https://download.gnome.org/sources/libgee/0.20/libgee-0.20.6.tar.xz
-      sha256: 1bf834f5e10d60cc6124d74ed3c1dd38da646787fbf7872220b8b4068e476d4d
+      url: https://download.gnome.org/sources/libgee/0.20/libgee-0.20.8.tar.xz
+      sha256: 189815ac143d89867193b0c52b7dc31f3aa108a15f04d6b5dca2b6adfad0b0ee
 
 - name: granite
   buildsystem: meson
   config-opts:
     - "--buildtype=release"
+    - "--prefix=/app"
+    - "--libdir=lib"
   sources:
     - type: archive
       url: https://github.com/elementary/granite/archive/refs/tags/6.2.0.tar.gz
@@ -89,6 +91,6 @@ modules:
     - rm -r /app/share/icons/hicolor/[0-9]*
   sources:
     - type: git
-      url: https://github.com/louis77/tuner.git
-      tag: v2.0.0 
+      url: https://github.com/tuner-labs/tuner.git
+      tag: v2.0.1-beta.1 
       
