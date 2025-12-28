@@ -91,6 +91,6 @@ modules:
     - rm -r /app/share/icons/hicolor/[0-9]*
   sources:
     - type: git
-      url: https://github.com/louis77/tuner.git
-      tag: v2.0.0-beta.1 
+      url: https://github.com/tuner-labs/tuner.git
+      tag: v2.0.1-beta.1 
       
