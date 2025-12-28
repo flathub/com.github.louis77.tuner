@@ -2,7 +2,7 @@
 [Build Bot](https://buildbot.flathub.org/#/apps/com.github.louis77.tuner)
 
 ## Assets
-_org.freedesktop.Platform_ latest version is 24.08
+_org.freedesktop.Platform_ latest version is 25.08
 
 ## Process
 ### Check Metadata
