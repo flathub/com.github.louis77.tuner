@@ -46,21 +46,6 @@ modules:
   build-commands:
     - install -d /app/vala
 
-- name: libsoup
-  buildsystem: meson
-  builddir: true
-  config-opts:
-    - "--buildtype=release"
-    - "-Dvapi=enabled"
-    - "-Dtests=false"
-    - "-Dgssapi=disabled"
-    - "-Dsysprof=disabled"
-  sources:
-    - type: git
-      url: https://gitlab.gnome.org/GNOME/libsoup.git
-      tag: 3.6.5
-      commit: 766e17528251c9b696a6076300ac61adc95536ac
-
 - name: gee
   buildsystem: autotools
   build-options:
@@ -92,5 +77,6 @@ modules:
   sources:
     - type: git
       url: https://github.com/tuner-labs/tuner.git
-      tag: v2.0.1-beta.1 
+      tag: v2.0.1-beta.1
+      commit: b4f5af9d529fc70a2bc7a140b48ca9ff12a8366c
       
