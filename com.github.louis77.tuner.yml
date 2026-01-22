@@ -77,5 +77,6 @@ modules:
   sources:
     - type: git
       url: https://github.com/tuner-labs/tuner.git
-      tag: v2.0.1-beta.1 
+      tag: v2.0.1-beta.1
+      commit: b4f5af9d529fc70a2bc7a140b48ca9ff12a8366c
       
