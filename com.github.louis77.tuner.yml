@@ -41,12 +41,12 @@ cleanup:
   - "*.a"
 
 modules:
-- name: vala
-  buildsystem: simple
-  build-commands:
-    - install -d /app/vala
+#- name: vala
+#  buildsystem: simple
+#  build-commands:
+#    - install -d /app/vala
 
-- name: gee
+- name: libgee
   buildsystem: autotools
   build-options:
     cflags: -Wno-error=incompatible-pointer-types
