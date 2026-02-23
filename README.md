@@ -21,7 +21,7 @@ Flathub Manifest and build information for *io.github.tuner_labs.tuner*
 
 ### Check Metadata
 
-From *Tuner* source code for the given release tag, verify:
+From *[Tuner](https://github.com/technosf/tuner)* source code for the given release tag, verify:
 
 - [ ] *meson.build*  =>  project.version
 - [ ] *data/com.github.louis77.tuner.appdata.xml.in* => releases.release version
