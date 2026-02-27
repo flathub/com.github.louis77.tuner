@@ -1,6 +1,17 @@
+<!--
+Copyright © 2026 <https://github.com/technosf>
+SPDX-FileCopyrightText: © 2026 <https://github.com/technosf>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+<!-- 
 # io.github.tuner_labs.tuner
 
 Flathub Manifest and build information for *io.github.tuner_labs.tuner*
+-->
+# com.github.louis77.tuner
+
+Flathub Manifest and build information for *com.github.louis77.tuner*
 
 ## Builds
 
@@ -28,7 +39,7 @@ From *[Tuner](https://github.com/technosf/tuner)* source code for the given rele
 
 ### Check Build
 
-Before checking in, test build and lint:
+Before checking in, test the app build and lint:
 
 ``` bash
 flatpak run org.flatpak.Builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --repo=repo builddir com.github.louis77.tuner.yml
@@ -41,5 +52,6 @@ flatpak run --command=flatpak-builder-lint org.flatpak.Builder repo repo
 ### 2.0.1
 
 - ~~Renamed app from *com.github.louis77.tuner* to *io.github.tuner_labs.tuner* to reflect the new app name. See [#7468](https://github.com/flathub/flathub/issues/7468)~~
+- Added *separate-locales: false* to glob all translations into the same image
 - [@syakushabb](https://github.com/yakushabb) removed *vala* module as it is now built into *FreeDesktop* 25.08. Module will remain in the source manifest for local builds. See [#40](https://github.com/flathub/com.github.louis77.tuner/pull/40)
 - [@syakushabb](https://github.com/yakushabb) removed *libsoup* module as it is now built into *FreeDesktop* 25.08. Module will remain in the source manifest for local builds. See [#43](https://github.com/flathub/com.github.louis77.tuner/pull/43)

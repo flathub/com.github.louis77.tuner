@@ -1,3 +1,8 @@
+# Copyright © 2026 <https://github.com/technosf>
+# SPDX-FileCopyrightText: © 2026 <https://github.com/technosf>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
 ---
 app-id: com.github.louis77.tuner
 
@@ -26,7 +31,6 @@ finish-args:
   - "--talk-name=org.freedesktop.Notifications"
   - "--own-name=org.mpris.MediaPlayer2.Tuner"
   - "--env=PATH=/usr/bin:/app/bin:/app/vala/bin"
-#  - "--env=add-ld-path=/app/vala/lib:/app/lib:/lib"
 
 cleanup:
   - "/include"
@@ -39,12 +43,11 @@ cleanup:
   - "/share/vala"
   - "*.la"
   - "*.a"
+  
+# Build flatpak with --no-separate-locales to avoid having to deal with translations in a separate module  
+separate-locales: false
 
 modules:
-#- name: vala
-#  buildsystem: simple
-#  build-commands:
-#    - install -d /app/vala
 
 - name: libgee
   buildsystem: autotools
