@@ -47,11 +47,14 @@ flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest com.gith
 flatpak run --command=flatpak-builder-lint org.flatpak.Builder repo repo
 ```
 
+Linting results are documented  at <https://docs.flathub.org/linter>
+
 ## History
 
 ### 2.0.1
 
 - ~~Renamed app from *com.github.louis77.tuner* to *io.github.tuner_labs.tuner* to reflect the new app name. See [#7468](https://github.com/flathub/flathub/issues/7468)~~
-- Added *separate-locales: false* to glob all translations into the same image
+- Added *separate-locales: false* to glob all translations into the same build image
+- Rationalized Icons
 - [@syakushabb](https://github.com/yakushabb) removed *vala* module as it is now built into *FreeDesktop* 25.08. Module will remain in the source manifest for local builds. See [#40](https://github.com/flathub/com.github.louis77.tuner/pull/40)
 - [@syakushabb](https://github.com/yakushabb) removed *libsoup* module as it is now built into *FreeDesktop* 25.08. Module will remain in the source manifest for local builds. See [#43](https://github.com/flathub/com.github.louis77.tuner/pull/43)

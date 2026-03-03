@@ -47,7 +47,6 @@ cleanup:
   - "granite-demo"
   - "granite.appdata.xml"
   - "io.elementary.granite.demo.desktop"
-  - "/lib/debug"
   
 # Build flatpak with --no-separate-locales to avoid having to deal with translations in a separate module  
 separate-locales: false
