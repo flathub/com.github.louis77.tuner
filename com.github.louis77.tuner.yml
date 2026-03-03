@@ -42,7 +42,12 @@ cleanup:
   - "/share/gtk-doc"
   - "/share/vala"
   - "*.la"
-  - "*.a"
+  - "*.a"  
+  - "granite.mo"
+  - "granite-demo"
+  - "granite.appdata.xml"
+  - "io.elementary.granite.demo.desktop"
+  - "/lib/debug"
   
 # Build flatpak with --no-separate-locales to avoid having to deal with translations in a separate module  
 separate-locales: false
@@ -73,13 +78,13 @@ modules:
   buildsystem: meson
   config-opts:
   - "--buildtype=release"  
-  post-install:
-    - cp -n -v /app/share/icons/hicolor/16x16/actions/*  /app/share/icons/hicolor/scalable/actions/
-    - install -Dm644 /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.svg  -t /app/share/icons/hicolor/scalable/apps/
-    - rm -r /app/share/icons/hicolor/[0-9]*
+  # post-install:
+  # - cp -n -v /app/share/icons/hicolor/16x16/actions/*  /app/share/icons/hicolor/scalable/actions/
+  #  - install -Dm644 /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.svg  -t /app/share/icons/hicolor/scalable/apps/
+  #  - rm -r /app/share/icons/hicolor/[0-9]*
   sources:
     - type: git
       url: https://github.com/tuner-labs/tuner.git
-      tag: v2.0.1-beta.3
-      commit: 0f236c205d378a2e9b4c938aef71f455f5a3a16d
+      tag: v2.0.1-beta.4
+      commit: 1252d9971fdc9ef9ed67b8e3e2efd06803860f16
       
