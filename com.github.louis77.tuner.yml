@@ -1,3 +1,8 @@
+# Copyright © 2026 <https://github.com/technosf>
+# SPDX-FileCopyrightText: © 2026 <https://github.com/technosf>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
 ---
 app-id: com.github.louis77.tuner
 
@@ -26,7 +31,6 @@ finish-args:
   - "--talk-name=org.freedesktop.Notifications"
   - "--own-name=org.mpris.MediaPlayer2.Tuner"
   - "--env=PATH=/usr/bin:/app/bin:/app/vala/bin"
-#  - "--env=add-ld-path=/app/vala/lib:/app/lib:/lib"
 
 cleanup:
   - "/include"
@@ -38,30 +42,18 @@ cleanup:
   - "/share/gtk-doc"
   - "/share/vala"
   - "*.la"
-  - "*.a"
+  - "*.a"  
+  - "granite.mo"
+  - "granite-demo"
+  - "granite.appdata.xml"
+  - "io.elementary.granite.demo.desktop"
+  
+# Build flatpak with --no-separate-locales to avoid having to deal with translations in a separate module  
+separate-locales: false
 
 modules:
-- name: vala
-  buildsystem: simple
-  build-commands:
-    - install -d /app/vala
 
-- name: libsoup
-  buildsystem: meson
-  builddir: true
-  config-opts:
-    - "--buildtype=release"
-    - "-Dvapi=enabled"
-    - "-Dtests=false"
-    - "-Dgssapi=disabled"
-    - "-Dsysprof=disabled"
-  sources:
-    - type: git
-      url: https://gitlab.gnome.org/GNOME/libsoup.git
-      tag: 3.6.5
-      commit: 766e17528251c9b696a6076300ac61adc95536ac
-
-- name: gee
+- name: libgee
   buildsystem: autotools
   build-options:
     cflags: -Wno-error=incompatible-pointer-types
@@ -73,7 +65,7 @@ modules:
 - name: granite
   buildsystem: meson
   config-opts:
-    - "--buildtype=release"
+    - "--buildtype=release" 
     - "--prefix=/app"
     - "--libdir=lib"
   sources:
@@ -81,16 +73,13 @@ modules:
       url: https://github.com/elementary/granite/archive/refs/tags/6.2.0.tar.gz
       sha256: 067d31445da9808a802fca523630c3e4b84d2d7c78ae547ced017cb7f3b9c6b5
 
-- name : tuner
+- name: tuner
   buildsystem: meson
   config-opts:
-    - "--buildtype=release"
-  post-install:
-    - cp -n -v /app/share/icons/hicolor/16x16/actions/*  /app/share/icons/hicolor/scalable/actions/
-    - install -Dm644 /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.svg  -t /app/share/icons/hicolor/scalable/apps/
-    - rm -r /app/share/icons/hicolor/[0-9]*
+  - "--buildtype=release"  
   sources:
     - type: git
       url: https://github.com/tuner-labs/tuner.git
-      tag: v2.0.1-beta.1 
+      tag: v2.0.1
+      commit: 80d10f11ae5c08b7d0ccb4780a77d1ffd5d9ef50
       
