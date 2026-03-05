@@ -4,13 +4,13 @@ SPDX-FileCopyrightText: © 2026 <https://github.com/technosf>
 
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
-# com.github.louis77.tuner
+# io.github.tuner_labs.tuner
 
-Flathub Manifest and build information for *com.github.louis77.tuner*
+Flathub Manifest and build information for *io.github.tuner_labs.tuner*
 
 ## Builds
 
-[Build Bot](https://builds.flathub.org/status/com.github.louis77.tuner)
+[Build Bot](https://builds.flathub.org/status/io.github.tuner_labs.tuner)
 
 ### Assets
 
@@ -31,16 +31,16 @@ From *[Tuner](https://github.com/technosf/tuner)* source code for the given rele
 
 - [ ] *meson.build*  =>  project.version
 
-- [ ] *data/com.github.louis77.tuner.appdata.xml.in* => releases.release version
+- [ ] *data/io.github.tuner_labs.tuner.appdata.xml.in* => releases.release version
 
 ### Check Build
 
 Before checking in, test the app build and lint:
 
 ``` bash
-flatpak run org.flatpak.Builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --repo=repo builddir com.github.louis77.tuner.yml
+flatpak run org.flatpak.Builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --repo=repo builddir io.github.tuner_labs.tuner.yml
 
-flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest com.github.louis77.tuner.yml
+flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest io.github.tuner_labs.tuner.yml
 
 flatpak run --command=flatpak-builder-lint org.flatpak.Builder repo repo
 ```
@@ -48,6 +48,10 @@ flatpak run --command=flatpak-builder-lint org.flatpak.Builder repo repo
 Linting results are documented  at <https://docs.flathub.org/linter>
 
 ## History
+
+### 2.0.2
+
+- Renaming from *com.github.louis77.tuner* to *io.github.tuner_labs.tuner* per flathub #7468
 
 ### 2.0.1
 

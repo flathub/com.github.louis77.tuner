@@ -4,9 +4,9 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 ---
-app-id: com.github.louis77.tuner
+app-id: io.github.tuner_labs.tuner
 
-command: com.github.louis77.tuner
+command: io.github.tuner_labs.tuner
 
 runtime: org.freedesktop.Platform
 runtime-version: '25.08'
@@ -82,5 +82,5 @@ modules:
     - type: git
       url: https://github.com/tuner-labs/tuner.git
       tag: v2.0.2-beta.1
-      commit: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      commit: 5e8e146105bc760bc55c19c198050fa40f07ff64
       
