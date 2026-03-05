@@ -3,12 +3,18 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
+# Copyright © 2026 <https://github.com/technosf>
+# SPDX-FileCopyrightText: © 2026 <https://github.com/technosf>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
 ---
 app-id: com.github.louis77.tuner
 
 command: com.github.louis77.tuner
 
 runtime: org.freedesktop.Platform
+runtime-version: '25.08'
 runtime-version: '25.08'
 
 sdk: org.freedesktop.Sdk
@@ -33,14 +39,11 @@ finish-args:
   - "--env=PATH=/usr/bin:/app/bin:/app/vala/bin"
 
 cleanup:
-  - "/include"
-  - "/lib/pkgconfig"
-  - "/share/pkgconfig"
-  - "/share/aclocal"
-  - "/man"
-  - "/share/man"
-  - "/share/gtk-doc"
-  - "/share/vala"
+  - /include
+  - /lib/girepository-1.0
+  - /lib/pkgconfig
+  - /share/gir-1.0
+  - /share/vala
   - "*.la"
   - "*.a"  
   - "granite.mo"
@@ -54,6 +57,8 @@ separate-locales: false
 modules:
 
 - name: libgee
+
+- name: libgee
   buildsystem: autotools
   build-options:
     cflags: -Wno-error=incompatible-pointer-types
@@ -61,9 +66,15 @@ modules:
     - type: archive
       url: https://download.gnome.org/sources/libgee/0.20/libgee-0.20.8.tar.xz
       sha256: 189815ac143d89867193b0c52b7dc31f3aa108a15f04d6b5dca2b6adfad0b0ee
+      url: https://download.gnome.org/sources/libgee/0.20/libgee-0.20.8.tar.xz
+      sha256: 189815ac143d89867193b0c52b7dc31f3aa108a15f04d6b5dca2b6adfad0b0ee
 
 - name: granite
   buildsystem: meson
+  cleanup:
+    - /bin
+    - /share/applications
+    - /share/metainfo
   config-opts:
     - "--buildtype=release" 
     - "--prefix=/app"
@@ -73,6 +84,7 @@ modules:
       url: https://github.com/elementary/granite/archive/refs/tags/6.2.0.tar.gz
       sha256: 067d31445da9808a802fca523630c3e4b84d2d7c78ae547ced017cb7f3b9c6b5
 
+- name: tuner
 - name: tuner
   buildsystem: meson
   config-opts:

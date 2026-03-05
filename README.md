@@ -13,6 +13,21 @@ Flathub Manifest and build information for *io.github.tuner_labs.tuner*
 
 Flathub Manifest and build information for *com.github.louis77.tuner*
 
+<!--
+Copyright © 2026 <https://github.com/technosf>
+SPDX-FileCopyrightText: © 2026 <https://github.com/technosf>
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+<!-- 
+# io.github.tuner_labs.tuner
+
+Flathub Manifest and build information for *io.github.tuner_labs.tuner*
+-->
+# com.github.louis77.tuner
+
+Flathub Manifest and build information for *com.github.louis77.tuner*
+
 ## Builds
 
 [Build Bot](https://builds.flathub.org/status/com.github.louis77.tuner)
@@ -27,8 +42,19 @@ Flathub Manifest and build information for *com.github.louis77.tuner*
 
 - libgee 0.20.8
 - granite 6.2.0
+### Assets
+
+#### Platform
+
+- org.freedesktop.Platform_ latest version is 25.08
+
+#### Modules
+
+- libgee 0.20.8
+- granite 6.2.0
 
 ## Process
+
 
 ### Check Metadata
 
@@ -39,6 +65,10 @@ From *[Tuner](https://github.com/technosf/tuner)* source code for the given rele
 - [ ] *data/com.github.louis77.tuner.appdata.xml.in* => releases.release version
 
 ### Check Build
+
+Before checking in, test the app build and lint:
+
+``` bash
 
 Before checking in, test the app build and lint:
 
